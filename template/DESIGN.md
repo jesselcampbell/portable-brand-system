@@ -1,11 +1,6 @@
 ---
 title: Design
 type: meta
-status: draft          # draft | approved | deprecated
-version: 0.1.0
-owner:
-reviewed:               # yyyy-mm-dd
-review_cycle: 6 months
 summary:                # How the brand applies across outputs, and where each output's guide lives.
 ---
 
@@ -23,10 +18,10 @@ summary:                # How the brand applies across outputs, and where each o
 
 ## Outputs
 
-| Output | Guide | Status |
-| ------ | ----- | ------ |
-| Presentations | [DESIGN.md](design/presentations/DESIGN.md) | draft |
-| Website | [DESIGN.md](design/website/DESIGN.md) | draft |
+| Output | Guide |
+| ------ | ----- |
+| Presentations | [DESIGN.md](design/presentations/DESIGN.md) |
+| Website | [DESIGN.md](design/website/DESIGN.md) |
 
 ## Adding a new output
 

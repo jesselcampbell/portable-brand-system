@@ -1,7 +1,6 @@
 ---
 title: Source title
 type: source
-status: draft
 date:
 author:
 method:

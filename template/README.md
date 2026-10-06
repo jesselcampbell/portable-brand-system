@@ -1,11 +1,6 @@
 ---
 title: README
 type: meta
-status: draft          # draft | approved | deprecated
-version: 0.1.0
-owner:
-reviewed:               # yyyy-mm-dd
-review_cycle: 6 months
 summary:                # What this brand package is and how to start using it.
 ---
 
@@ -42,4 +37,4 @@ assets/           Logos, fonts, imagery, and tokens
 
 ## Version and license
 
-<!-- Current package version (from BRAND.md) and the license for the brand's materials. -->
+<!-- Current package version (from CHANGELOG.md) and the license for the brand's materials. -->

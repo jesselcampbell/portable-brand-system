@@ -1,11 +1,6 @@
 ---
 title: Industry
 type: profile
-status: draft          # draft | approved | deprecated
-version: 0.1.0
-owner:
-reviewed:               # yyyy-mm-dd
-review_cycle: 6 months
 summary:                # Copy this file for each key industry (B2B). One file per industry.
 ---
 

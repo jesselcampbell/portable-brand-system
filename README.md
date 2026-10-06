@@ -64,7 +64,7 @@ Files starting with `_` are templates for repeating files (one per audience, off
 1. Copy `template/` and rename it for the brand.
 2. Fill in `brand/identity.md` first. Everything else traces back to it.
 3. Work through `brand/`, then `profiles/`, then `design/`. Delete sections that don't apply.
-4. Compile `BRAND.md` from the approved files.
+4. Compile `BRAND.md` from the finished files.
 5. Log each decision in `CHANGELOG.md` as you go.
 
 Guidance for each section is written as HTML comments in the template files. It's hidden when the files are rendered, and AI tools can follow it when drafting.

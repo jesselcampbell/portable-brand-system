@@ -1,17 +1,12 @@
 ---
 title: Brand name
 type: meta
-status: draft          # draft | approved | deprecated
-version: 0.1.0
-owner:
-reviewed:               # yyyy-mm-dd
-review_cycle: 6 months
 summary:                # One sentence: what this brand is and what this file gives you.
 ---
 
 # Brand name
 
-<!-- The brand on one page. If a person or AI reads only this file, they should be able to make on-brand work. Compiled from approved files only; set `version` to the package version. -->
+<!-- The brand on one page. If a person or AI reads only this file, they should be able to make on-brand work. Compiled from the other files in the package. -->
 
 ## In short
 
@@ -53,8 +48,8 @@ summary:                # One sentence: what this brand is and what this file gi
 
 ## Index
 
-<!-- Every file in the package with its summary and status. -->
+<!-- Every file in the package with its summary. -->
 
-| File | Summary | Status |
-| ---- | ------- | ------ |
-|      |         |        |
+| File | Summary |
+| ---- | ------- |
+|      |         |

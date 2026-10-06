@@ -1,11 +1,6 @@
 ---
 title: Output name
 type: guideline
-status: draft          # draft | approved | deprecated
-version: 0.1.0
-owner:
-reviewed:               # yyyy-mm-dd
-review_cycle: 6 months
 summary:                # How the brand applies to output name: layout, patterns, and templates.
 ---
 

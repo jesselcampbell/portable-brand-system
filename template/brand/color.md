@@ -1,11 +1,6 @@
 ---
 title: Color
 type: guideline
-status: draft          # draft | approved | deprecated
-version: 0.1.0
-owner:
-reviewed:               # yyyy-mm-dd
-review_cycle: 6 months
 summary:                # The palette, how much of each color to use, and approved combinations.
 ---
 

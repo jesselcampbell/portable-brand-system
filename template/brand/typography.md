@@ -1,11 +1,6 @@
 ---
 title: Typography
 type: guideline
-status: draft          # draft | approved | deprecated
-version: 0.1.0
-owner:
-reviewed:               # yyyy-mm-dd
-review_cycle: 6 months
 summary:                # Typefaces, the type scale, named styles, and hierarchy rules.
 ---
 

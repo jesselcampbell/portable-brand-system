@@ -23,16 +23,11 @@ Every file starts with the same minimal frontmatter. `summary` is what an agent 
 ---
 title: Voice
 type: guideline            # meta | guideline | profile | source
-status: approved           # draft | approved | deprecated
-version: 1.2.0             # file version; package version lives in BRAND.md
-owner: Jane Smith          # person accountable for this file
-reviewed: 2026-10-06       # last time someone confirmed it's still true
-review_cycle: 6 months
 summary: How Kurnl sounds, how tone shifts by context, and the words we use and avoid.
 ---
 ```
 
-`source` files swap `version`, `reviewed` and `review_cycle` for `date`, `author` and `method`.
+`source` files add `date`, `author` and `method`.
 
 ### Body pattern
 
@@ -105,11 +100,6 @@ The full pattern in one file.
 ---
 title: Voice
 type: guideline
-status: draft
-version: 0.1.0
-owner:
-reviewed:
-review_cycle: 6 months
 summary:
 ---
 
@@ -180,11 +170,11 @@ Draft in the brand voice:
 
 | File               | Sections                                                                                                                                                                                                             |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `BRAND.md`         | In short · Positioning · Essential rules (the ~10 most important Fixed rules, by ID, across all files) · Voice at a glance · Look at a glance (logo, color, type with token refs) · How to use this system (task → files to load) · Ownership · Index (every file with summary and status) |
+| `BRAND.md`         | In short · Positioning · Essential rules (the ~10 most important Fixed rules, by ID, across all files) · Voice at a glance · Look at a glance (logo, color, type with token refs) · How to use this system (task → files to load) · Ownership · Index (every file with its summary) |
 | `README.md`        | What this is · What's inside · How it's organized · Getting started: people · Getting started: AI tools · Version and license                                                                                        |
 | `CHANGELOG.md`     | One H2 per version, newest first: `## 1.2.0 — 2026-10-06`, then `Added` · `Changed` · `Retired` · `Decisions`                                                                                                         |
-| `CONTRIBUTING.md`  | Roles (Owner, Steward, Contributor) · What changes how (change type → who approves → version bump) · Proposing a change: people · Proposing a change: AI · Bringing work back · Statuses                             |
-| `DESIGN.md` (root) | How the brand applies across outputs · Shared foundations (what's in `assets/data/tokens.json`) · Outputs (table: output → guide → status) · Adding a new output                                                     |
+| `CONTRIBUTING.md`  | Roles (Owner, Steward, Contributor) · What changes how (change type → who approves → version bump) · Proposing a change: people · Proposing a change: AI · Bringing work back                             |
+| `DESIGN.md` (root) | How the brand applies across outputs · Shared foundations (what's in `assets/data/tokens.json`) · Outputs (table: output → guide) · Adding a new output                                                     |
 
 **Versioning** (in `CONTRIBUTING.md`): major = strategy changes (identity, positioning); minor = new or changed guidance, a new output guide; patch = corrections and clarifications.
 

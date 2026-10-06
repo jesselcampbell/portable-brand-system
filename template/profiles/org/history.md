@@ -1,11 +1,6 @@
 ---
 title: History
 type: profile
-status: draft          # draft | approved | deprecated
-version: 0.1.0
-owner:
-reviewed:               # yyyy-mm-dd
-review_cycle: 6 months
 summary:                # Origin, timeline, and the stories worth telling.
 ---
 
