@@ -35,7 +35,3 @@ description:            # How the brand moves: principles, timing, usage, and ac
 ```text
 …
 ```
-
-## Related
-
-- [identity](identity.md)

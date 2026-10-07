@@ -59,7 +59,3 @@ description:            # Visual principles and direction for photography, illus
 ```text
 …
 ```
-
-## Related
-
-- [identity](identity.md)

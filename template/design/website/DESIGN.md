@@ -57,8 +57,3 @@ description:            # How the brand applies to website: layout, patterns, an
 <!-- Dated notes from real use: what worked, what didn't, what to change. -->
 
 - yyyy-mm-dd: …
-
-## Related
-
-- [DESIGN.md](../../DESIGN.md)
-- [tokens](tokens.json)

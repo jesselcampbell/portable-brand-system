@@ -34,7 +34,6 @@ description: How Kurnl sounds, how tone shifts by context, and the words we use 
 1. **H1 title** that matches `title`.
 2. **Opening paragraph** of 2–4 sentences. If someone reads nothing else, this is enough to act on.
 3. **H2 sections** in the default order for that document (below). Remove sections that don't apply rather than leaving them empty. Add new sections after the defaults.
-4. **Related** as the last section: relative links to the files this one depends on or informs.
 
 H3 and lower are free for structure inside a section. No H2 should need more than a screen to read; split into a new file before that happens.
 
@@ -158,10 +157,6 @@ Draft in the brand voice:
 …
 ```
 
-## Related
-
-- [identity](identity.md)
-- [audience profiles](../profiles/audience/)
 ````
 
 ## Default sections by document

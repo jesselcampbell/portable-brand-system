@@ -47,7 +47,3 @@ description:            # The palette, how much of each color to use, and approv
 ```text
 …
 ```
-
-## Related
-
-- [identity](identity.md)

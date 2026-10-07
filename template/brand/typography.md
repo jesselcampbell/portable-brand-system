@@ -41,7 +41,3 @@ description:            # Typefaces, the type scale, named styles, and hierarchy
 **Fixed**
 
 - **TYP-01 — …** … *Why:* …
-
-## Related
-
-- [identity](identity.md)

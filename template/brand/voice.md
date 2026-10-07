@@ -58,7 +58,3 @@ Draft in the brand voice:
 ```text
 …
 ```
-
-## Related
-
-- [identity](identity.md)

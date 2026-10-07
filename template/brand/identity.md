@@ -47,8 +47,3 @@ description:            # Essence, purpose, positioning, personality, principles
 ## Story
 
 <!-- The core narrative: the problem in the world, what the brand does about it, and what changes as a result. -->
-
-## Related
-
-- [voice](voice.md)
-- [BRAND.md](../BRAND.md)
