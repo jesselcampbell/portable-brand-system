@@ -2,8 +2,6 @@
 
 A shared foundation for people and AI to grow and manage brands, keeping the identity intact while letting expression expand.
 
-> **Status:** early draft (v0.1). The structure and formatting are working proposals, being tested on real brands.
-
 ## Why
 
 People get to know a company through what it says and does. As a company grows, more people have a hand in that work. Teams change, tools multiply, and the thinking behind the brand gets scattered. With AI, more people make websites, presentations, and campaigns, but they aren't always working from the same understanding. Drift happens.
