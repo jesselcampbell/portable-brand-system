@@ -1,12 +1,16 @@
 ---
 title: Identity
 type: guideline
-description:            # Essence, purpose, positioning, personality, principles, and story.
+description:            # Overview, essence, purpose, positioning, personality, principles, and story.
 ---
 
 # Identity
 
 <!-- The strategic core. Everything else in the system should trace back to this file. -->
+
+## Overview
+
+<!-- The brand in four questions, in plain words: Who is it for? What does it sell them? Who else has a stake? Who is the end user? -->
 
 ## Essence
 
@@ -34,7 +38,7 @@ description:            # Essence, purpose, positioning, personality, principles
 
 **Fixed**
 
-- **IDN-01 — …** … *Why:* …
+- **…** … *Why:* …
 
 **Flexible**
 

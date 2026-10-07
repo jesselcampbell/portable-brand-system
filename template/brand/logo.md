@@ -22,7 +22,7 @@ description:            # Logo variants, color usage, clearspace, minimum sizes,
 
 **Fixed**
 
-- **LOG-01 — …** … *Why:* …
+- **…** … *Why:* …
 
 **Flexible**
 
@@ -42,4 +42,4 @@ description:            # Logo variants, color usage, clearspace, minimum sizes,
 
 **Fixed**
 
-- **LOG-01 — …** … *Why:* …
+- **…** … *Why:* …

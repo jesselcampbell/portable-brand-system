@@ -27,7 +27,7 @@ description:            # How the brand sounds, how tone shifts by context, and 
 
 **Fixed**
 
-- **VOI-01 — …** … *Why:* …
+- **…** … *Why:* …
 
 **Flexible**
 

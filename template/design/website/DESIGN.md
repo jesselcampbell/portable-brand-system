@@ -6,7 +6,7 @@ description:            # How the brand applies to website: layout, patterns, an
 
 # Website
 
-<!-- Output guide. Same sections for every output, so a new output is just a new folder. Values live in this folder's tokens.json. -->
+<!-- Output guide. Same sections for every output, so a new output is just a new folder. Values go in the Values section at the end; shared rules live in the brand-wide design/DESIGN.md, so cover only what this medium changes. -->
 
 ## Job
 
@@ -16,7 +16,7 @@ description:            # How the brand applies to website: layout, patterns, an
 
 **Fixed**
 
-- **WEB-01 — …** … *Why:* …
+- **…** … *Why:* …
 
 **Flexible**
 
@@ -57,3 +57,11 @@ description:            # How the brand applies to website: layout, patterns, an
 <!-- Dated notes from real use: what worked, what didn't, what to change. -->
 
 - yyyy-mm-dd: …
+
+## Values
+
+<!-- Every value this output uses: shared tokens by name (from brand/color.md, typography.md, layout.md), plus anything specific to this medium. -->
+
+| Token | Value | Note |
+| ----- | ----- | ---- |
+| | | |
