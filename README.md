@@ -68,7 +68,3 @@ Files starting with `_` are templates for repeating files (one per audience, off
 5. Log each decision in `CHANGELOG.md` as you go.
 
 Guidance for each section is written as HTML comments in the template files. It's hidden when the files are rendered, and AI tools can follow it when drafting.
-
-## Maintained by
-
-[Partner Creative](https://heypartner.co)
