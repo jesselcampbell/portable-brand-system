@@ -6,7 +6,7 @@ description:            # Typefaces, the type scale, named styles, and hierarchy
 
 # Typography
 
-<!-- How type carries the brand. Sizes and families live in tokens. -->
+<!-- How type carries the brand. Every type value lives in this file, next to its token name. -->
 
 ## Typefaces
 
@@ -20,7 +20,11 @@ description:            # Typefaces, the type scale, named styles, and hierarchy
 
 ## Styles
 
-<!-- Named styles (Display, Heading 1, Body, Caption…) with family, weight, size, and line-height tokens. -->
+<!-- Named styles (Display, Heading 1, Body, Caption…), each with its values. -->
+
+| Style | Token | Weight | Size | Fluid size | Line height | Tracking | Use for |
+| ----- | ----- | ------ | ---- | ---------- | ----------- | -------- | ------- |
+| | | | | | | | |
 
 ## Hierarchy
 
@@ -28,7 +32,7 @@ description:            # Typefaces, the type scale, named styles, and hierarchy
 
 **Fixed**
 
-- **TYP-01 — …** … *Why:* …
+- **…** … *Why:* …
 
 **Flexible**
 
@@ -40,4 +44,4 @@ description:            # Typefaces, the type scale, named styles, and hierarchy
 
 **Fixed**
 
-- **TYP-01 — …** … *Why:* …
+- **…** … *Why:* …

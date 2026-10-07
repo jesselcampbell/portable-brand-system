@@ -12,7 +12,7 @@ description:            # How the brand moves: principles, timing, usage, and ac
 
 **Fixed**
 
-- **MOT-01 — …** … *Why:* …
+- **…** … *Why:* …
 
 **Flexible**
 

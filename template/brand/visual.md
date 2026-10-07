@@ -14,7 +14,7 @@ description:            # Visual principles and direction for photography, illus
 
 **Fixed**
 
-- **VIS-01 — …** … *Why:* …
+- **…** … *Why:* …
 
 **Flexible**
 
@@ -26,7 +26,7 @@ description:            # Visual principles and direction for photography, illus
 
 **Fixed**
 
-- **VIS-01 — …** … *Why:* …
+- **…** … *Why:* …
 
 **Flexible**
 
@@ -38,7 +38,7 @@ description:            # Visual principles and direction for photography, illus
 
 **Fixed**
 
-- **VIS-01 — …** … *Why:* …
+- **…** … *Why:* …
 
 **Flexible**
 

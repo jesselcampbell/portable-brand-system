@@ -36,3 +36,11 @@ description:            # How people and AI tools propose, approve, and record c
 ## Bringing work back
 
 <!-- How finished work (a deck, a landing page, an event kit) becomes part of the system: capture what worked, propose the reusable parts, review, add to design/, log in CHANGELOG.md. -->
+
+## Open decisions
+
+<!-- What blocks work today. Files mark open questions with GAP comments (needs the brand's organization) or TODO comments (the steward owns it); list the ones that block work here. -->
+
+| Decision | Blocks | Where |
+| -------- | ------ | ----- |
+| | | |

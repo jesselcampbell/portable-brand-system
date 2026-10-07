@@ -6,7 +6,7 @@ description:            # The palette, how much of each color to use, and approv
 
 # Color
 
-<!-- How color expresses the brand. Values live in assets/data/tokens.json; show them here next to token names. -->
+<!-- How color expresses the brand. Every color value lives in this file, next to its token name: hex, plus any other formats the brand uses (OKLCH, CMYK, Pantone). A platform builds tokens from these tables. -->
 
 ## Palette
 
@@ -14,13 +14,21 @@ description:            # The palette, how much of each color to use, and approv
 | ---- | ----- | ----- | ---- |
 | | | | |
 
+### Print
+
+<!-- Official print builds, if the brand prints. -->
+
+| Token | CMYK | Pantone |
+| ----- | ---- | ------- |
+| | | |
+
 ## Proportion
 
 <!-- How much of each color, typically. A ratio or a reference composition. -->
 
 **Fixed**
 
-- **COL-01 — …** … *Why:* …
+- **…** … *Why:* …
 
 **Flexible**
 
@@ -40,7 +48,11 @@ description:            # The palette, how much of each color to use, and approv
 
 ## Scales
 
-<!-- Tints and shades for UI and data visualization, by token. -->
+<!-- Tints and shades for UI and data visualization: what each ramp is for, then a table of every step's value by token. -->
+
+| Ramp | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 |
+| ---- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| | | | | | | | | | |
 
 ## Prompts
 
