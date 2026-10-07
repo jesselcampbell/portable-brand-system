@@ -1,7 +1,7 @@
 ---
 title: README
 type: meta
-summary:                # What this brand package is and how to start using it.
+description:            # What this brand package is and how to start using it.
 ---
 
 # README

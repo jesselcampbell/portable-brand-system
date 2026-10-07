@@ -1,7 +1,7 @@
 ---
 title: Industry
 type: profile
-summary:                # Copy this file for each key industry (B2B). One file per industry.
+description:            # Copy this file for each key industry (B2B). One file per industry.
 ---
 
 # Industry

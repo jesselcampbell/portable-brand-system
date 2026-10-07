@@ -1,7 +1,7 @@
 ---
 title: Brand name
 type: meta
-summary:                # One sentence: what this brand is and what this file gives you.
+description:            # One sentence: what this brand is and what this file gives you.
 ---
 
 # Brand name
@@ -48,8 +48,8 @@ summary:                # One sentence: what this brand is and what this file gi
 
 ## Index
 
-<!-- Every file in the package with its summary. -->
+<!-- Every file in the package with its description. -->
 
-| File | Summary |
-| ---- | ------- |
+| File | Description |
+| ---- | ----------- |
 |      |         |

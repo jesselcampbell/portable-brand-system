@@ -1,7 +1,7 @@
 ---
 title: Offering
 type: profile
-summary:                # Copy this file for each product or service. One file per offering.
+description:            # Copy this file for each product or service. One file per offering.
 ---
 
 # Offering

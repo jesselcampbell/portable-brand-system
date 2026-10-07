@@ -1,7 +1,7 @@
 ---
 title: Voice
 type: guideline
-summary:                # How the brand sounds, how tone shifts by context, and the words it uses and avoids.
+description:            # How the brand sounds, how tone shifts by context, and the words it uses and avoids.
 ---
 
 # Voice

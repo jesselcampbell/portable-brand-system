@@ -1,7 +1,7 @@
 ---
 title: Website
 type: guideline
-summary:                # How the brand applies to website: layout, patterns, and templates.
+description:            # How the brand applies to website: layout, patterns, and templates.
 ---
 
 # Website

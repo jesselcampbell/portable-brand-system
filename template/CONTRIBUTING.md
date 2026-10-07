@@ -1,7 +1,7 @@
 ---
 title: Contributing
 type: meta
-summary:                # How people and AI tools propose, approve, and record changes to the brand system.
+description:            # How people and AI tools propose, approve, and record changes to the brand system.
 ---
 
 # Contributing

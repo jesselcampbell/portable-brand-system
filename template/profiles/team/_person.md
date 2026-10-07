@@ -1,7 +1,7 @@
 ---
 title: Person name
 type: profile
-summary:                # Copy this file for each team member. One file per person.
+description:            # Copy this file for each team member. One file per person.
 ---
 
 # Person name

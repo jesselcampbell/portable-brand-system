@@ -17,13 +17,13 @@ Every file is one of four types. The type decides the formatting mode.
 
 ### Frontmatter
 
-Every file starts with the same minimal frontmatter. `summary` is what an agent reads to decide whether to load the file, so it carries real information, not a label.
+Every file starts with the same minimal frontmatter. `description` is what an agent reads to decide whether to load the file, so it carries real information, not a label.
 
 ```yaml
 ---
 title: Voice
 type: guideline            # meta | guideline | profile | source
-summary: How Kurnl sounds, how tone shifts by context, and the words we use and avoid.
+description: How Kurnl sounds, how tone shifts by context, and the words we use and avoid.
 ---
 ```
 
@@ -100,7 +100,7 @@ The full pattern in one file.
 ---
 title: Voice
 type: guideline
-summary:
+description:
 ---
 
 # Voice
@@ -170,7 +170,7 @@ Draft in the brand voice:
 
 | File               | Sections                                                                                                                                                                                                             |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `BRAND.md`         | In short · Positioning · Essential rules (the ~10 most important Fixed rules, by ID, across all files) · Voice at a glance · Look at a glance (logo, color, type with token refs) · How to use this system (task → files to load) · Ownership · Index (every file with its summary) |
+| `BRAND.md`         | In short · Positioning · Essential rules (the ~10 most important Fixed rules, by ID, across all files) · Voice at a glance · Look at a glance (logo, color, type with token refs) · How to use this system (task → files to load) · Ownership · Index (every file with its description) |
 | `README.md`        | What this is · What's inside · How it's organized · Getting started: people · Getting started: AI tools · Version and license                                                                                        |
 | `CHANGELOG.md`     | One H2 per version, newest first: `## 1.2.0 — 2026-10-06`, then `Added` · `Changed` · `Retired` · `Decisions`                                                                                                         |
 | `CONTRIBUTING.md`  | Roles (Owner, Steward, Contributor) · What changes how (change type → who approves → version bump) · Proposing a change: people · Proposing a change: AI · Bringing work back                             |

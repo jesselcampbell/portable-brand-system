@@ -1,7 +1,7 @@
 ---
 title: Typography
 type: guideline
-summary:                # Typefaces, the type scale, named styles, and hierarchy rules.
+description:            # Typefaces, the type scale, named styles, and hierarchy rules.
 ---
 
 # Typography

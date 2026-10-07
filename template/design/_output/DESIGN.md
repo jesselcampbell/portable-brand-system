@@ -1,7 +1,7 @@
 ---
 title: Output name
 type: guideline
-summary:                # How the brand applies to output name: layout, patterns, and templates.
+description:            # How the brand applies to output name: layout, patterns, and templates.
 ---
 
 # Output name

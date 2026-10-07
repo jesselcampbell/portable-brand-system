@@ -1,7 +1,7 @@
 ---
 title: Motion
 type: guideline
-summary:                # How the brand moves: principles, timing, usage, and accessibility.
+description:            # How the brand moves: principles, timing, usage, and accessibility.
 ---
 
 # Motion

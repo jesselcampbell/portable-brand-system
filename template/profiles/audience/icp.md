@@ -1,7 +1,7 @@
 ---
 title: Ideal customer profile
 type: profile
-summary:                # Who the brand sells to, how to recognize them, and who it doesn't serve.
+description:            # Who the brand sells to, how to recognize them, and who it doesn't serve.
 ---
 
 # Ideal customer profile

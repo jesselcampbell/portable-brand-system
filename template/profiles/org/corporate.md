@@ -1,7 +1,7 @@
 ---
 title: Corporate
 type: profile
-summary:                # Legal and trading names, entities, locations, and digital properties.
+description:            # Legal and trading names, entities, locations, and digital properties.
 ---
 
 # Corporate

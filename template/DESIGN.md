@@ -1,7 +1,7 @@
 ---
 title: Design
 type: meta
-summary:                # How the brand applies across outputs, and where each output's guide lives.
+description:            # How the brand applies across outputs, and where each output's guide lives.
 ---
 
 # Design

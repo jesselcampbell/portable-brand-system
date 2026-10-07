@@ -1,7 +1,7 @@
 ---
 title: Audience profile
 type: profile
-summary:                # Copy this file for each audience profile (one file per profile).
+description:            # Copy this file for each audience profile (one file per profile).
 ---
 
 # Audience profile

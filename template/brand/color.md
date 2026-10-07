@@ -1,7 +1,7 @@
 ---
 title: Color
 type: guideline
-summary:                # The palette, how much of each color to use, and approved combinations.
+description:            # The palette, how much of each color to use, and approved combinations.
 ---
 
 # Color

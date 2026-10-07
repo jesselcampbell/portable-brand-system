@@ -1,7 +1,7 @@
 ---
 title: Presentations
 type: guideline
-summary:                # How the brand applies to presentations: layout, patterns, and templates.
+description:            # How the brand applies to presentations: layout, patterns, and templates.
 ---
 
 # Presentations

@@ -1,7 +1,7 @@
 ---
 title: Structure
 type: profile
-summary:                # Ownership, entities, business units, and leadership.
+description:            # Ownership, entities, business units, and leadership.
 ---
 
 # Structure

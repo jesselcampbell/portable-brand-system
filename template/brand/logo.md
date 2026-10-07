@@ -1,7 +1,7 @@
 ---
 title: Logo
 type: guideline
-summary:                # Logo variants, color usage, clearspace, minimum sizes, and misuse.
+description:            # Logo variants, color usage, clearspace, minimum sizes, and misuse.
 ---
 
 # Logo

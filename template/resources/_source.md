@@ -4,7 +4,7 @@ type: source
 date:
 author:
 method:
-summary:          # Copy for each piece of research. Name it {topic}-{yyyy-mm-dd}.md.
+description:      # Copy for each piece of research. Name it {topic}-{yyyy-mm-dd}.md.
 ---
 
 # Source title

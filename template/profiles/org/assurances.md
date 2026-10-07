@@ -1,7 +1,7 @@
 ---
 title: Assurances
 type: profile
-summary:                # Certifications, standards, and compliance claims, with evidence and approved wording.
+description:            # Certifications, standards, and compliance claims, with evidence and approved wording.
 ---
 
 # Assurances

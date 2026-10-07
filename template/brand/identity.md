@@ -1,7 +1,7 @@
 ---
 title: Identity
 type: guideline
-summary:                # Essence, purpose, positioning, personality, principles, and story.
+description:            # Essence, purpose, positioning, personality, principles, and story.
 ---
 
 # Identity

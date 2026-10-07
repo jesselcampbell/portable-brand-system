@@ -1,7 +1,7 @@
 ---
 title: Visual
 type: guideline
-summary:                # Visual principles and direction for photography, illustration, iconography, and composition.
+description:            # Visual principles and direction for photography, illustration, iconography, and composition.
 ---
 
 # Visual

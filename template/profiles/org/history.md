@@ -1,7 +1,7 @@
 ---
 title: History
 type: profile
-summary:                # Origin, timeline, and the stories worth telling.
+description:            # Origin, timeline, and the stories worth telling.
 ---
 
 # History

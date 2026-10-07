@@ -1,7 +1,7 @@
 ---
 title: Changelog
 type: meta
-summary:                # What changed in this brand system, when, and why.
+description:            # What changed in this brand system, when, and why.
 ---
 
 # Changelog
