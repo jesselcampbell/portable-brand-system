@@ -87,7 +87,6 @@ template/
 │       ├── DESIGN.md      // Rules, patterns, templates, values
 │       └── templates/     // Reusable templates for this output type
 ├── dna/                   // Reusable instructions for generative AI
-│   ├── README.md          // Treatment index, selection, dependencies
 │   └── _treatment.md      // Purpose, precision, semantic, relationships, instructions, review, references
 └── profiles/              // Maintained facts about the organization and the people and markets it serves
     ├── audience/          // Audience needs, behaviors, and ideal customer criteria
@@ -114,7 +113,7 @@ Files and folders beginning with `_` are templates. Copy and rename them, then r
 2. Fill in `brand/identity.md` first. Everything else traces back to it.
 3. Work through `brand/` and `profiles/`, removing sections that don't apply.
 4. Copy `design/_output/` for each output type the brand needs, such as `design/slide-decks/`. Keep approved reusable templates in that output's `templates/` folder.
-5. Copy `dna/_treatment.md` for each approved reusable generation treatment. Index finished treatments in `dna/README.md`, link them from the governing brand guides, and remove the blank scaffold.
+5. Copy `dna/_treatment.md` for each approved reusable generation treatment. Index finished treatments in the root `README.md`, link them from the governing brand guides, and remove the blank scaffold.
 6. Write the `README.md` last, linking directly to the finished files, output guides, and treatments.
 7. Record approved decisions in the brand package's `CHANGELOG.md`.
 
@@ -134,7 +133,7 @@ The folders have distinct roles:
 | `profiles/` | Maintained facts, evidence boundaries, and approved claims |
 | `assets/` | Approved reusable media and artwork |
 
-Keep one independently usable creative treatment per file. Name files for the treatment, such as `strand-art.md`, rather than for a particular AI tool. An agent should be able to select the file, identify its dependencies, supply a brief, and apply it. Use subfolders only when the library needs them. `dna/README.md` provides a short treatment index; `_treatment.md` is the copyable scaffold and is removed from an active package after use.
+Keep one independently usable creative treatment per file. Name files for the treatment, such as `strand-art.md`, rather than for a particular AI tool. An agent should be able to select the file, identify its dependencies, supply a brief, and apply it. Use subfolders only when the library needs them. The root `README.md` provides the full treatment index; `_treatment.md` is the copyable scaffold and is removed from an active package after use.
 
 Each treatment uses `type: guideline` and these sections in this order:
 
