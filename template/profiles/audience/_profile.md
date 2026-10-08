@@ -32,4 +32,4 @@ description:            # Copy this file for each audience profile (one file per
 
 ## Evidence
 
-<!-- Research, interviews, and data this profile is based on. -->
+<!-- Source references and essential supporting context for the approved facts above. Link to external research, interviews, and data; keep the research archive outside the package. -->

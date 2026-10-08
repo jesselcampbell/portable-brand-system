@@ -35,7 +35,7 @@ description:            # How people and AI tools propose, approve, and record c
 
 ## Bringing work back
 
-<!-- How finished work (a deck, a landing page, an event kit) becomes part of the system: capture what worked, propose the reusable parts, review, add to design/, log in CHANGELOG.md. -->
+<!-- Platforms can collect research, feedback, and experiments. Propose the reusable knowledge and materials, review them, then update the relevant brand/, profiles/, assets/, or design/ files and log the decision in CHANGELOG.md. Approved assets and templates may be created by people or tools. Keep project deliverables, research archives, and working files outside the package; preserve essential rationale and source references within it. -->
 
 ## Open decisions
 

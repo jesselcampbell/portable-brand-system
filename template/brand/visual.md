@@ -1,7 +1,7 @@
 ---
 title: Visual
 type: guideline
-description:            # Visual principles and direction for photography, illustration, iconography, and composition.
+description:            # Visual principles and direction for photography, art, iconography, and composition.
 ---
 
 # Visual
@@ -22,7 +22,7 @@ description:            # Visual principles and direction for photography, illus
 
 ## Photography
 
-<!-- Subject, light, framing, treatment. Link examples in assets/. -->
+<!-- Subject, light, framing, treatment. Link examples in assets/photography/. -->
 
 **Fixed**
 
@@ -32,9 +32,9 @@ description:            # Visual principles and direction for photography, illus
 
 - …
 
-## Illustration
+## Art
 
-<!-- Style, when to use it instead of photography, and examples. -->
+<!-- Direction for illustrations, renderings, patterns, textures, and other artwork. Explain when to use each and link approved examples in assets/art/. -->
 
 **Fixed**
 
@@ -46,7 +46,7 @@ description:            # Visual principles and direction for photography, illus
 
 ## Iconography
 
-<!-- Style, grid, stroke, and the icon set's location. -->
+<!-- Style, grid, stroke, and the approved icon sets in assets/icons/. -->
 
 ## Composition
 

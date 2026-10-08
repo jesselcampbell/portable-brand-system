@@ -1,7 +1,7 @@
 ---
 title: Portable Brand System spec
 type: meta
-spec_version: 0.1.0
+spec_version: 0.2.0
 description: The Portable Brand System specification, not the brand itself. How every file in this package is structured, document types, frontmatter, body pattern, fixed and flexible rules, tokens, prompts, and default sections per file. Examples are illustrative, not rules for the brand contained.
 ---
 
@@ -9,22 +9,82 @@ description: The Portable Brand System specification, not the brand itself. How 
 
 Here we outline the default sections and formatting for every document in a Portable Brand System (PBS). The goal is that any file, opened by a person or an AI, reads the same way: what it is, what's fixed, what can flex, and why.
 
+## Package boundary
+
+The standard defines a small, documented structure for approved, reusable brand knowledge and materials. People and AI must be able to read and maintain the package without a particular account, platform, or runtime. Platforms can research, manage workflows, produce assets, and assemble outputs around it.
+
+A package brings together guidelines, profiles, assets, design values, and patterns/templates. It carries essential rationale alongside rules, source references alongside facts, and approved decisions in `CHANGELOG.md`. Research archives, interviews, audits, experiments, working files, and project deliverables remain outside the package.
+
+Compiled `BRAND.md`, `brand.json`, root `DESIGN.md`, `llms.txt`, JSON-LD, `tokens.json`, and assembled output kits are platform outputs. Approved reusable assets and templates can become source materials through review, regardless of whether a person or a tool created them.
+
+## Package structure
+
+Copy the template and keep only what the brand needs. Files and folders starting with `_` are templates for repeated items; copy and rename them, then remove the originals. `brand/audio.md` is optional. Each output folder has its own `DESIGN.md` and `templates/`; the package README provides wayfinding.
+
+```text
+template/
+├── CHANGELOG.md           // Versions, changes, decisions
+├── CONTRIBUTING.md        // Roles, approvals, contributions
+├── GLOSSARY.md            // Terms
+├── README.md              // Navigation, AI use, stewardship
+├── SPEC.md                // Structure, conventions, examples
+├── assets/                // Brand materials referenced in the brand and for use in production
+│   ├── fonts/             // Font files
+│   ├── logos/             // Approved logo artwork and prepared logo assets
+│   │   ├── PNG/           // Raster logo files
+│   │   ├── SVG/           // Vector logo files
+│   │   └── composed/      // Prepared logo compositions for avatars, icons, and similar uses
+│   ├── photography/       // Approved photography for use across brand applications
+│   ├── art/               // Illustrations, renderings, patterns, textures, and other artwork
+│   ├── icons/             // Approved icons and icon sets
+│   ├── motion/            // Animations, motion graphics, and reusable motion assets
+│   └── audio/             // Sonic logos, music, sound effects, and other brand audio
+├── brand/                 // Brand strategy and expression, with rules, rationale, examples, and values
+│   ├── audio.md           // Sound identity, music, usage (optional)
+│   ├── color.md           // Palette, pairings, proportions
+│   ├── identity.md        // Purpose, positioning, personality, story
+│   ├── layout.md          // Spacing, radius, grid
+│   ├── logo.md            // Variants, sizing, usage
+│   ├── motion.md          // Timing, usage, accessibility
+│   ├── typography.md      // Typefaces, scale, hierarchy
+│   ├── visual.md          // Art direction, composition, prompts
+│   └── voice.md           // Tone, vocabulary, mechanics, narratives, samples
+├── design/                // Guidance and reusable starting points for each output type
+│   └── _output/           // Blank output folder to copy and adapt for a medium or format (e.g. slide-decks/)
+│       ├── DESIGN.md      // Rules, patterns, templates, values
+│       └── templates/     // Reusable templates for this output type
+└── profiles/              // Maintained facts about the organization and the people and markets it serves
+    ├── audience/          // Audience needs, behaviors, and ideal customer criteria
+    │   ├── _profile.md    // Needs, motivations, messaging, evidence
+    │   └── icp.md         // Customer fit, buyers, signals
+    ├── industries/        // Industry context for B2B brands
+    │   └── _industry.md   // Context, pressures, language, proof
+    ├── offerings/         // Product and service facts, benefits, proof, and approved claims
+    │   └── _offering.md   // Benefits, proof, pricing, claims
+    ├── org/               // Organizational identity, structure, credentials, and history
+    │   ├── assurances.md  // Assurances
+    │   ├── corporate.md   // Names, locations, channels, contacts
+    │   ├── history.md     // Origin, timeline, stories
+    │   └── structure.md   // Ownership, units, leadership
+    └── team/              // Approved team biographies, expertise, photos, and uses
+        └── _person.md     // Role, bio, expertise, permissions
+```
+
 ## Document types
 
-Every file is one of four types.
+Every Markdown document is one of three types. Asset files and reusable templates retain the formats appropriate to their use.
 
-| Type        | Lives in                                                                          | Mode                                                       | Contains rules |
-| ----------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------- | -------------- |
-| `meta`      | `README.md`, `CHANGELOG.md`, `CONTRIBUTING.md`, `GLOSSARY.md`, `design/DESIGN.md` | Orientation. Indexes, summaries, how the system works.     | Summaries      |
-| `guideline` | `brand/`, `design/`                                                               | Prescriptive. Rules, guidance, examples, rationale.        | Yes            |
-| `profile`   | `profiles/`                                                                       | Descriptive. Maintained facts with sources.                | No             |
-| `source`    | `resources/`                                                                      | Evidence. Dated, never edited after the fact, never canon. | No             |
+| Type        | Lives in                                                                 | Mode                                    | Contains rules                    |
+| ----------- | ------------------------------------------------------------------------ | --------------------------------------- | --------------------------------- |
+| `meta`      | `README.md`, `SPEC.md`, `CHANGELOG.md`, `CONTRIBUTING.md`, `GLOSSARY.md` | Orientation and conventions             | Summaries and package conventions |
+| `guideline` | `brand/`, `design/<output>/DESIGN.md`                                    | Rules, guidance, examples, rationale    | Yes                               |
+| `profile`   | `profiles/`                                                              | Maintained facts with source references | No                                |
 
 ## Shared conventions
 
 ### Frontmatter
 
-Every file starts with some minimal frontmatter. `description` is what an agent reads to decide whether to load the file, so it carries real information, not a label.
+Every Markdown document starts with some minimal frontmatter. `description` is what an agent reads to decide whether to load the file, so it carries real information, not a label.
 
 ```yaml
 ---
@@ -33,8 +93,6 @@ type: guideline
 description: How Kurnl sounds, how tone shifts by context, and the words we use and avoid.
 ---
 ```
-
-`source` files add `date`, `author` and `method`.
 
 ### Body pattern
 
@@ -93,7 +151,7 @@ Reusable prompt fragments go in a `Prompts` section as fenced `text` blocks with
 
 ### Well-known and built files
 
-The Portable Brand System package is a reference structure, not a build. It holds no generated files. Standardized files like `tokens.json`, a compiled `brand.md`, `llms.txt` and output kits are produced and held outside this repo.
+The package supplies source context for compiled files and assembled output kits. Those outputs are produced and maintained outside the package; there is no `outputs/` or `dist/` folder. The `DESIGN.md` in each output folder is source guidance, distinct from a compiled root `DESIGN.md`. Approved reusable assets and templates may be included regardless of how they were made.
 
 ### Template guidance
 
@@ -101,7 +159,7 @@ Instructions for filling a template are HTML comments (`<!-- … -->`). They're 
 
 ### Portability
 
-Plain CommonMark only: no wikilinks, callouts, or plugin syntax. Links are relative Markdown links (`[voice](voice.md#tone)`). Tables over nested bullets for anything with more than two attributes.
+Use plain Markdown with tables; no wikilinks, callouts, or plugin syntax. Links are relative Markdown links (`[voice](voice.md#tone)`). Tables over nested bullets for anything with more than two attributes.
 
 ### Formatting conventions
 
@@ -165,6 +223,10 @@ description:
 
 <!-- Capitalization, punctuation, numbers, dates, names, spelling (e.g. Canadian English). Only what's specific to this brand; defer to a named style guide for the rest. -->
 
+## Narratives
+
+<!-- Reusable narrative structures and messaging themes, grounded in identity.md and maintained profile facts. Explain when each fits and what can vary; link to facts and claims instead of redefining them. -->
+
 ## Samples
 
 <!-- 3+ before/after rewrites across different channels. These are the most useful few-shot examples for AI tools. -->
@@ -188,7 +250,7 @@ Draft in the brand voice:
 | `README.md`        | · Opening (what this is)<br>· What's inside (folder map)<br>· Where to find things (wayfinding: task → file)<br>· Using it with AI tools<br>· Who looks after it<br>· Version and license                                                |
 | `CHANGELOG.md`     | One H2 per version, newest first: `## 1.2.0 — 2026-10-06`, then `Added` · `Changed` · `Retired` · `Decisions`                                                                                                                            |
 | `CONTRIBUTING.md`  | · Roles (Owner, Steward, Contributor)<br>· What changes how (change type → who approves → version bump)<br>· Proposing a change: people<br>· Proposing a change: AI<br>· Bringing work back<br>· Open decisions (what blocks work today) |
-| `design/DESIGN.md` | The brand-wide DESIGN.md (and names the per-output files)<br>· How the brand applies across outputs<br>· Shared foundations (where values live)<br>· Outputs (table: output → guide)<br>· Adding a new output                            |
+| `SPEC.md`          | Package boundary · Package structure · Document types · Shared conventions · Example · Default sections by document                                                                                                                      |
 | `GLOSSARY.md`      | Terms (table: term → meaning, linked to where it's explained)                                                                                                                                                                            |
 
 **Versioning** (in `CONTRIBUTING.md`):
@@ -208,19 +270,20 @@ Draft in the brand voice:
 | File            | Sections                                                                                                                                                                                                                                   |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `identity.md`   | · Overview (who it's for, what's sold, who has a stake, who the end user is)<br>· Essence<br>· Purpose<br>· Positioning (statement, category, competitive frame, differentiators)<br>· Personality ("X, not Y")<br>· Principles<br>· Story |
-| `voice.md`      | · Identity<br>· Dimensions<br>· Tone<br>· Vocabulary<br>· Mechanics<br>· Samples<br>· Prompts                                                                                                                                              |
+| `voice.md`      | · Identity<br>· Dimensions<br>· Tone<br>· Vocabulary<br>· Mechanics<br>· Narratives<br>· Samples<br>· Prompts                                                                                                                              |
 | `color.md`      | · Palette<br>· Proportion<br>· Combinations (approved pairings with contrast ratios)<br>· Gradients<br>· Scales<br>· Prompts                                                                                                               |
 | `typography.md` | · Typefaces (family, token, license, fallbacks)<br>· Scale<br>· Styles<br>· Hierarchy<br>· Guardrails                                                                                                                                      |
 | `logo.md`       | · Variants<br>· Color (which version on which background)<br>· Clearspace<br>· Sizing<br>· Guardrails                                                                                                                                      |
-| `visual.md`     | · Principles<br>· Photography<br>· Illustration<br>· Iconography<br>· Composition<br>· Prompts                                                                                                                                             |
+| `visual.md`     | · Principles<br>· Photography<br>· Art (illustrations, renderings, patterns, textures)<br>· Iconography<br>· Composition<br>· Prompts                                                                                                      |
 | `layout.md`     | · Spacing (token table)<br>· Radius (token table)<br>· Grid                                                                                                                                                                                |
 | `motion.md`     | · Principles<br>· Timing (token refs)<br>· Usage<br>· Accessibility<br>· Prompts                                                                                                                                                           |
+| `audio.md`      | Optional: Sound identity · Sonic logo · Music · Usage · Accessibility · Examples · Prompts                                                                                                                                                 |
 
-Sections that sets direction use **Fixed vs. Flexible** rule setting. Guardrails sections are Fixed rules with Don't examples.
+Sections that set direction use **Fixed vs. Flexible** rule setting. Guardrails sections are Fixed rules with Don't examples.
 
 ### Guidelines: `design/<output>/DESIGN.md`
 
-One per output type (presentations, website, social, events…). Same sections for all, so a new output is just a new folder:
+Copy `design/_output/` for each output type (slide-decks, website, social, events…). Link shared rules directly to `brand/`, add the guide to the package README, and keep reusable templates in the output's `templates/` folder. Remove irrelevant sections and add medium-specific guidance as needed:
 
 - Job (what this output has to do, for whom)
 - What holds, what flexes (Fixed / Flexible for this context)
@@ -229,12 +292,12 @@ One per output type (presentations, website, social, events…). Same sections f
 - Patterns (each: when to use, structure, what can vary)
 - Templates (file → when to use)
 - Checklist (before it ships)
-- Lessons (dated notes from real use, the "every project makes it more useful" loop)
+- Lessons (approved learning, dated and supported by rationale; raw feedback stays outside)
 - Values (table: token → shared token or value → note)
 
 ### Profiles: `profiles/`
 
-Profiles are facts, not guidance. They use tables with a **Source** column and, where wording matters, an **Approved wording** column. They don't contain rules; if a fact needs a rule (e.g. "never claim carbon neutral"), the rule goes in the relevant guideline and links here.
+Profiles are facts, not guidance. Keep enough supporting context to understand and use each fact without the research platform. Link to external evidence; do not copy research archives into the package. Profiles use tables with a **Source** column and, where wording matters, an **Approved wording** column. They don't contain rules; if a fact needs a rule (e.g. "never claim carbon neutral"), the rule goes in the relevant guideline and links here.
 
 | File                       | Sections                                                                                                                                                                 |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -249,9 +312,3 @@ Profiles are facts, not guidance. They use tables with a **Source** column and, 
 | `team/<person>.md`         | · Name and role<br>· Bio (short, long)<br>· Expertise<br>· Photo<br>· Links<br>· Approved for (quoting, speaking, bylines)                                               |
 
 `industries/` is for B2B packages.
-
-### Sources: `resources/`
-
-File name: `{topic}-{yyyy-mm-dd}.md`. Sections: Summary · Question · Method · Findings · Implications for the brand · Sources.
-
-Sources are never edited after they're dated. A new finding is a new file. Implications become canon only when a guideline or profile changes and a decision is logged in `CHANGELOG.md`.

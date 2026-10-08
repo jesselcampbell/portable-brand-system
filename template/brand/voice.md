@@ -45,6 +45,10 @@ description:            # How the brand sounds, how tone shifts by context, and 
 
 <!-- Capitalization, punctuation, numbers, dates, names, spelling. Only what's specific to this brand; defer to a named style guide for the rest. -->
 
+## Narratives
+
+<!-- Reusable narrative structures and messaging themes, grounded in identity.md and maintained profile facts. Explain when each fits and what can vary; link to facts and claims instead of redefining them. -->
+
 ## Samples
 
 <!-- 3+ before/after rewrites across different channels. These are the most useful examples for AI tools. -->

@@ -6,7 +6,7 @@ description:            # How the brand applies to output name: layout, patterns
 
 # Output name
 
-<!-- Output guide. Same sections for every output, so a new output is just a new folder. Values go in the Values section at the end; shared rules live in the brand-wide design/DESIGN.md, so cover only what this medium changes. -->
+<!-- Output guide. Same sections for every output, so a new output is just a new folder. Copy this folder for an output such as slide-decks/. Values go in the Values section at the end; link directly to the brand/ files for shared rules and describe only what this medium changes. Add the guide to the package README. -->
 
 ## Job
 
@@ -28,7 +28,7 @@ description:            # How the brand applies to output name: layout, patterns
 
 ## Type and color in use
 
-<!-- Which styles and colors this output uses, and how. Reference brand/ files. -->
+<!-- Which styles and colors this output uses, and how. Reference brand/ files. Where relevant, add motion and sound guidance linked to brand/motion.md and brand/audio.md. -->
 
 ## Patterns
 
@@ -42,6 +42,8 @@ description:            # How the brand applies to output name: layout, patterns
 
 ## Templates
 
+<!-- Approved reusable templates live in templates/. Working deliverables and assembled output kits stay with the project or platform. -->
+
 | Template | File | Use when |
 | -------- | ---- | -------- |
 | | | |
@@ -54,7 +56,7 @@ description:            # How the brand applies to output name: layout, patterns
 
 ## Lessons
 
-<!-- Dated notes from real use: what worked, what didn't, what to change. -->
+<!-- Approved lessons worth carrying forward, with a date and rationale. Feedback records and experiments stay outside the package. Log approved changes in CHANGELOG.md. -->
 
 - yyyy-mm-dd: …
 
