@@ -54,8 +54,6 @@ description:            # Visual principles and direction for photography, art, 
 
 ## Prompts
 
-<!-- Image-generation prompt fragments for each style. -->
+<!-- Link to the relevant completed treatment in dna/. Reusable generation instructions and prompt blocks live there; this guide remains their governing source. -->
 
-```text
-…
-```
+<!-- Link directly to each relevant completed dna/<treatment>.md file. The root README contains the full index. -->
