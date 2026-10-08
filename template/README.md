@@ -26,7 +26,7 @@ assets/       Approved fonts, logos, photography, art, icons, motion, and audio
 
 ## Where to find things
 
-<!-- Wayfinding: a short "If you need to… → start with" table. Cover the common jobs (explain the brand, write anything, pick a color or logo, make an output, find audio guidance if used, check a claim, write a bio) and link straight to the file or section. Ten rows or fewer. -->
+<!-- Wayfinding: a short "If you need to… → start with" table. Cover the common jobs (explain the brand, write anything, pick a color or logo, make an output, find audio guidance if used, check a claim, write a bio) and link straight to the file or section. Keep this table concise; index all completed DNA treatments with their purposes and application limits, here or in a short Generation treatments section. -->
 
 | If you need to… | Start with |
 | --------------- | ---------- |
