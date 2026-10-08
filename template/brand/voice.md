@@ -55,10 +55,6 @@ description:            # How the brand sounds, how tone shifts by context, and 
 
 ## Prompts
 
-<!-- Reusable prompt fragments, pasteable whole. -->
+<!-- Link to the relevant completed treatment in dna/. Reusable generation instructions and prompt blocks live there; this guide remains their governing source. -->
 
-Draft in the brand voice:
-
-```text
-…
-```
+<!-- Link directly to each relevant completed dna/<treatment>.md file. The root README contains the full index. -->
