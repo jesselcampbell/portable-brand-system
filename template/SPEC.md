@@ -54,7 +54,6 @@ template/
 │       ├── DESIGN.md      // Rules, patterns, templates, values
 │       └── templates/     // Reusable templates for this output type
 ├── dna/                   // Reusable instructions for generative AI
-│   ├── README.md          // Treatment index, selection, dependencies
 │   └── _treatment.md      // Purpose, precision, semantic, relationships, instructions, review, references
 └── profiles/              // Maintained facts about the organization and the people and markets it serves
     ├── audience/          // Audience needs, behaviors, and ideal customer criteria
@@ -79,7 +78,7 @@ Every Markdown document is one of three types. Asset files and reusable template
 
 | Type        | Lives in                                                                 | Mode                                    | Contains rules                    |
 | ----------- | ------------------------------------------------------------------------ | --------------------------------------- | --------------------------------- |
-| `meta`      | `README.md`, `SPEC.md`, `CHANGELOG.md`, `CONTRIBUTING.md`, `GLOSSARY.md`, `dna/README.md` | Orientation and conventions             | Summaries and package conventions |
+| `meta`      | `README.md`, `SPEC.md`, `CHANGELOG.md`, `CONTRIBUTING.md`, `GLOSSARY.md` | Orientation and conventions             | Summaries and package conventions |
 | `guideline` | `brand/`, `dna/<treatment>.md`, `design/<output>/DESIGN.md`                                    | Rules, guidance, examples, rationale    | Yes                               |
 | `profile`   | `profiles/`                                                              | Maintained facts with source references | No                                |
 
@@ -166,7 +165,7 @@ The folders have distinct roles:
 | `profiles/` | Maintained facts, evidence boundaries, and approved claims |
 | `assets/` | Approved reusable media and artwork |
 
-Keep one independently usable creative treatment per file. Name files for the treatment, such as `strand-art.md`, rather than for a particular AI tool. An agent should be able to select the file, identify its dependencies, supply a brief, and apply it. Use subfolders only when the library needs them. `dna/README.md` provides a short treatment index; `_treatment.md` is the copyable scaffold and is removed from an active package after use.
+Keep one independently usable creative treatment per file. Name files for the treatment, such as `strand-art.md`, rather than for a particular AI tool. An agent should be able to select the file, identify its dependencies, supply a brief, and apply it. Use subfolders only when the library needs them. The root `README.md` provides the full treatment index; `_treatment.md` is the copyable scaffold and is removed from an active package after use.
 
 Each treatment uses `type: guideline` and these sections in this order:
 
@@ -276,7 +275,7 @@ description:
 
 <!-- Link to the relevant completed treatment in dna/. Reusable prompt blocks live there. -->
 
-See [generation treatments](../dna/README.md).
+<!-- Link directly to each relevant completed dna/<treatment>.md file. The root README contains the full index. -->
 
 ````
 
@@ -322,7 +321,7 @@ Sections that set direction use **Fixed vs. Flexible** rule setting. Guardrails 
 
 ### Guidelines: `dna/<treatment>.md`
 
-Copy `dna/_treatment.md` for each defined treatment. The default sections are Purpose and scope · Precision · Semantic · Relationships · Generation instructions · Review criteria · References and open decisions. Keep all three layers explicit and mark missing knowledge without inventing it. See [DNA conventions](#dna--reusable-generation-instructions). `dna/README.md` is a meta index of completed treatments and their application limits.
+Copy `dna/_treatment.md` for each defined treatment. The default sections are Purpose and scope · Precision · Semantic · Relationships · Generation instructions · Review criteria · References and open decisions. Keep all three layers explicit and mark missing knowledge without inventing it. See [DNA conventions](#dna--reusable-generation-instructions). The root `README.md` indexes completed treatments and their application limits; there is no `dna/README.md`.
 
 ### Guidelines: `design/<output>/DESIGN.md`
 
