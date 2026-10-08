@@ -56,6 +56,6 @@ description:            # The palette, how much of each color to use, and approv
 
 ## Prompts
 
-```text
-…
-```
+<!-- Link to the relevant completed treatment in dna/. Reusable generation instructions and prompt blocks live there; this guide remains their governing source. -->
+
+<!-- Link directly to each relevant completed dna/<treatment>.md file. The root README contains the full index. -->
