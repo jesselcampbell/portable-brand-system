@@ -6,7 +6,7 @@ This records changes to the Portable Brand System specification and template. Br
 
 ### Added
 
-- Optional root `dna/` folder for approved reusable generative-AI treatments, with a README index and copyable treatment template.
+- Optional root `dna/` folder for approved reusable generative-AI treatments, indexed in the root README, with a copyable treatment template.
 - An explicit seven-section treatment format containing Precision, Semantic and Relationships layers, generation instructions, review criteria, source references and unresolved decisions.
 - Frontmatter descriptions explain the nature of content and when to use it, within 280 characters.
 
