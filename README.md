@@ -12,13 +12,14 @@ It makes doing the right thing the easy thing.
 
 ## What's in a brand package
 
-It brings together five parts:
+It brings together six parts:
 
 1. **Guidelines:** The documented thinking behind the brand: its strategy, voice, visual direction, motion, and sound, with the reasons behind important decisions and guidance for applying them.
 2. **Profiles:** Maintained facts about the organization, its audiences, industries, offerings, and people, with source references and approved wording where needed.
 3. **Assets:** Approved materials teams create with: logos, fonts, photography, art, icons, motion, and audio.
 4. **Design values:** Named, reusable values, such as colors, type scales, and spacing, written in Markdown tables beside their token names. These tables give people and tools the source information needed to generate `tokens.json` or other formats.
 5. **Patterns and templates:** Reusable starting points, such as slide layouts, website sections, product components, and proposal templates, with guidance on when and how to use them.
+6. **DNA:** Reusable generation instructions that translate brand knowledge into creative treatments, with explicit precision, semantic meaning, relationships, prompts, and review criteria.
 
 The package holds approved, reusable brand knowledge and materials that remain useful independently of a platform. People and their tools are the execution layer.
 
@@ -51,7 +52,7 @@ A brand system should grow with the people who use it. Every application is a ch
 
 ## This repository
 
-The repository contains this overview, a [specification changelog](CHANGELOG.md), and `template/`, a blank brand package. The current [specification](template/SPEC.md) is version 0.2.0. A brand's own version and decision history belong in its package's `CHANGELOG.md`.
+The repository contains this overview, a [specification changelog](CHANGELOG.md), and `template/`, a blank brand package. The current [specification](template/SPEC.md) is version 0.3.0. A brand's own version and decision history belong in its package's `CHANGELOG.md`.
 
 ```text
 template/
@@ -79,12 +80,14 @@ template/
 │   ├── logo.md            // Variants, sizing, usage
 │   ├── motion.md          // Timing, usage, accessibility
 │   ├── typography.md      // Typefaces, scale, hierarchy
-│   ├── visual.md          // Art direction, composition, prompts
+│   ├── visual.md          // Art direction and composition; links to generation treatments
 │   └── voice.md           // Tone, vocabulary, mechanics, narratives, samples
 ├── design/                // Guidance and reusable starting points for each output type
 │   └── _output/           // Blank output folder to copy and adapt for a medium or format (e.g. slide-decks/)
 │       ├── DESIGN.md      // Rules, patterns, templates, values
 │       └── templates/     // Reusable templates for this output type
+├── dna/                   // Reusable instructions for generative AI
+│   └── _treatment.md      // Purpose, precision, semantic, relationships, instructions, review, references
 └── profiles/              // Maintained facts about the organization and the people and markets it serves
     ├── audience/          // Audience needs, behaviors, and ideal customer criteria
     │   ├── _profile.md    // Needs, motivations, messaging, evidence
@@ -110,10 +113,49 @@ Files and folders beginning with `_` are templates. Copy and rename them, then r
 2. Fill in `brand/identity.md` first. Everything else traces back to it.
 3. Work through `brand/` and `profiles/`, removing sections that don't apply.
 4. Copy `design/_output/` for each output type the brand needs, such as `design/slide-decks/`. Keep approved reusable templates in that output's `templates/` folder.
-5. Write the `README.md` last, linking directly to the finished files and output guides.
-6. Record approved decisions in the brand package's `CHANGELOG.md`.
+5. Copy `dna/_treatment.md` for each approved reusable generation treatment. Index finished treatments in the root `README.md`, link them from the governing brand guides, and remove the blank scaffold.
+6. Write the `README.md` last, linking directly to the finished files, output guides, and treatments.
+7. Record approved decisions in the brand package's `CHANGELOG.md`.
 
 Each fact or value is defined once and linked elsewhere. Leave a `GAP` comment for questions the brand's organization must answer or a `TODO` for work the steward owns. Do not guess. Template instructions use HTML comments so they remain readable to AI tools without cluttering the rendered guidance.
+
+## DNA — reusable generation instructions
+
+`dna/` lives at the package root, beside `brand/`, `design/`, `profiles/`, and `assets/`. It holds approved reusable instructions for generating brand-consistent material. A treatment can describe photography, artwork, animation, audio, writing, or another form of expression; include only what the brand has defined.
+
+The folders have distinct roles:
+
+| Folder | Owns |
+| --- | --- |
+| `brand/` | Brand meaning, rules, values, and rationale |
+| `dna/` | How that knowledge translates into generation instructions |
+| `design/` | How to construct particular outputs, with reusable templates |
+| `profiles/` | Maintained facts, evidence boundaries, and approved claims |
+| `assets/` | Approved reusable media and artwork |
+
+Keep one independently usable creative treatment per file. Name files for the treatment, such as `strand-art.md`, rather than for a particular AI tool. An agent should be able to select the file, identify its dependencies, supply a brief, and apply it. Use subfolders only when the library needs them. The root `README.md` provides the full treatment index; `_treatment.md` is the copyable scaffold and is removed from an active package after use.
+
+Each treatment uses `type: guideline` and these sections in this order:
+
+| Section | Contains |
+| --- | --- |
+| Purpose and scope | What the treatment produces and when to use it |
+| Precision | Required assets, token references, and defined technical constraints |
+| Semantic | Creative character, mood, subject treatment, intended meaning, and misleading interpretations to avoid |
+| Relationships | Governing guidance, dependencies, application conditions, permitted variation, and documented exceptions |
+| Generation instructions | Reusable prompt blocks, exclusions, and variables supplied by the brief |
+| Review criteria | How to judge whether the result follows the treatment |
+| References and open decisions | Supporting examples, provenance, permission limits, and missing knowledge |
+
+**Precision, Semantic, and Relationships remain explicit.** A layer without defined knowledge says what is missing; it does not manufacture camera settings, motion timings, brand associations, or other decisions to complete a template. Exact wording or an asset reference can be precision even when no numerical value is involved.
+
+Brand guidance remains the authority. DNA links to its governing rules and owning value tables rather than maintaining competing definitions. Where prompt blocks repeat exact values so they can be used directly, treat those literals as dependent representations and keep them aligned with their named sources. Relationships should state what the link does — governed by, depends on, applies when, may adapt, or exception — rather than leaving the connection to inference.
+
+Distinguish fixed constraints from the creative variables a brief may supply. Keep portable instructions independent of model-specific syntax; label optional tool adaptations separately inside Generation instructions. Existing instructions can be relocated without changing their wording, but relocation does not approve unresolved uses or override newer guidance. Record conflicts, permissions, and draft evidence where they affect application.
+
+Reusable generation prompts belong here; brand guides link to the relevant treatments. Output assembly recipes remain with their output guides. Campaign prompts, experiments, generation logs, and project deliverables stay outside the source package. Only approved reusable learning and materials come back through review.
+
+This structure draws on [Sameness's image-consistency framework](https://www.sameness.io/ai-image-consistency), while retaining PBS's portable source files and separation between brand guidance, generation instructions, and project work.
 
 ## What stays outside
 

@@ -1,8 +1,8 @@
 ---
 title: Portable Brand System spec
 type: meta
-spec_version: 0.2.0
-description: The Portable Brand System specification, not the brand itself. How every file in this package is structured, document types, frontmatter, body pattern, fixed and flexible rules, tokens, prompts, and default sections per file. Examples are illustrative, not rules for the brand contained.
+spec_version: 0.3.0
+description: "PBS package structure, document conventions and template guidance. Use this when maintaining or validating a brand package; examples illustrate the format rather than define brand rules."
 ---
 
 # Portable Brand System spec
@@ -13,7 +13,7 @@ Here we outline the default sections and formatting for every document in a Port
 
 The standard defines a small, documented structure for approved, reusable brand knowledge and materials. People and AI must be able to read and maintain the package without a particular account, platform, or runtime. Platforms can research, manage workflows, produce assets, and assemble outputs around it.
 
-A package brings together guidelines, profiles, assets, design values, and patterns/templates. It carries essential rationale alongside rules, source references alongside facts, and approved decisions in `CHANGELOG.md`. Research archives, interviews, audits, experiments, working files, and project deliverables remain outside the package.
+A package brings together guidelines, profiles, assets, design values, patterns/templates, and reusable generation instructions. It carries essential rationale alongside rules, source references alongside facts, and approved decisions in `CHANGELOG.md`. Research archives, interviews, audits, experiments, working files, and project deliverables remain outside the package.
 
 Compiled `BRAND.md`, `brand.json`, root `DESIGN.md`, `llms.txt`, JSON-LD, `tokens.json`, and assembled output kits are platform outputs. Approved reusable assets and templates can become source materials through review, regardless of whether a person or a tool created them.
 
@@ -47,12 +47,14 @@ template/
 │   ├── logo.md            // Variants, sizing, usage
 │   ├── motion.md          // Timing, usage, accessibility
 │   ├── typography.md      // Typefaces, scale, hierarchy
-│   ├── visual.md          // Art direction, composition, prompts
+│   ├── visual.md          // Art direction and composition; links to generation treatments
 │   └── voice.md           // Tone, vocabulary, mechanics, narratives, samples
 ├── design/                // Guidance and reusable starting points for each output type
 │   └── _output/           // Blank output folder to copy and adapt for a medium or format (e.g. slide-decks/)
 │       ├── DESIGN.md      // Rules, patterns, templates, values
 │       └── templates/     // Reusable templates for this output type
+├── dna/                   // Reusable instructions for generative AI
+│   └── _treatment.md      // Purpose, precision, semantic, relationships, instructions, review, references
 └── profiles/              // Maintained facts about the organization and the people and markets it serves
     ├── audience/          // Audience needs, behaviors, and ideal customer criteria
     │   ├── _profile.md    // Needs, motivations, messaging, evidence
@@ -77,20 +79,20 @@ Every Markdown document is one of three types. Asset files and reusable template
 | Type        | Lives in                                                                 | Mode                                    | Contains rules                    |
 | ----------- | ------------------------------------------------------------------------ | --------------------------------------- | --------------------------------- |
 | `meta`      | `README.md`, `SPEC.md`, `CHANGELOG.md`, `CONTRIBUTING.md`, `GLOSSARY.md` | Orientation and conventions             | Summaries and package conventions |
-| `guideline` | `brand/`, `design/<output>/DESIGN.md`                                    | Rules, guidance, examples, rationale    | Yes                               |
+| `guideline` | `brand/`, `dna/<treatment>.md`, `design/<output>/DESIGN.md`                                    | Rules, guidance, examples, rationale    | Yes                               |
 | `profile`   | `profiles/`                                                              | Maintained facts with source references | No                                |
 
 ## Shared conventions
 
 ### Frontmatter
 
-Every Markdown document starts with some minimal frontmatter. `description` is what an agent reads to decide whether to load the file, so it carries real information, not a label.
+Every Markdown document starts with some minimal frontmatter. `description` is what an agent reads to decide whether to load the file, so it carries real information, not a label. It describes the nature of the content in one or two sentences, followed by one or two sentences explaining when to use it. The complete description must be no longer than 280 characters; describe the knowledge rather than restating it.
 
 ```yaml
 ---
 title: Voice
 type: guideline
-description: How Kurnl sounds, how tone shifts by context, and the words we use and avoid.
+description: "Writing guidance covering tone, vocabulary, mechanics and examples. Use this when drafting or reviewing brand copy for an audience and context."
 ---
 ```
 
@@ -147,7 +149,45 @@ Each value is defined once, in the file that owns it. The `visual.md` file and t
 
 ### Prompts
 
-Reusable prompt fragments go in a `Prompts` section as fenced `text` blocks with a one-line label above each. They're written to be pasted whole, so no surrounding context is assumed.
+Reusable generative-AI instructions belong in `dna/<treatment>.md`, with fenced `text` prompt blocks and clearly declared variables and dependencies. Brand guides may keep a `Prompts` section as navigation to the relevant DNA files. Output assembly recipes remain in `design/<output>/`; research and task-specific experiments remain external.
+
+### DNA — reusable generation instructions
+
+`dna/` lives at the package root, beside `brand/`, `design/`, `profiles/`, and `assets/`. It holds approved reusable instructions for generating brand-consistent material. A treatment can describe photography, artwork, animation, audio, writing, or another form of expression; include only what the brand has defined.
+
+The folders have distinct roles:
+
+| Folder | Owns |
+| --- | --- |
+| `brand/` | Brand meaning, rules, values, and rationale |
+| `dna/` | How that knowledge translates into generation instructions |
+| `design/` | How to construct particular outputs, with reusable templates |
+| `profiles/` | Maintained facts, evidence boundaries, and approved claims |
+| `assets/` | Approved reusable media and artwork |
+
+Keep one independently usable creative treatment per file. Name files for the treatment, such as `strand-art.md`, rather than for a particular AI tool. An agent should be able to select the file, identify its dependencies, supply a brief, and apply it. Use subfolders only when the library needs them. The root `README.md` provides the full treatment index; `_treatment.md` is the copyable scaffold and is removed from an active package after use.
+
+Each treatment uses `type: guideline` and these sections in this order:
+
+| Section | Contains |
+| --- | --- |
+| Purpose and scope | What the treatment produces and when to use it |
+| Precision | Required assets, token references, and defined technical constraints |
+| Semantic | Creative character, mood, subject treatment, intended meaning, and misleading interpretations to avoid |
+| Relationships | Governing guidance, dependencies, application conditions, permitted variation, and documented exceptions |
+| Generation instructions | Reusable prompt blocks, exclusions, and variables supplied by the brief |
+| Review criteria | How to judge whether the result follows the treatment |
+| References and open decisions | Supporting examples, provenance, permission limits, and missing knowledge |
+
+**Precision, Semantic, and Relationships remain explicit.** A layer without defined knowledge says what is missing; it does not manufacture camera settings, motion timings, brand associations, or other decisions to complete a template. Exact wording or an asset reference can be precision even when no numerical value is involved.
+
+Brand guidance remains the authority. DNA links to its governing rules and owning value tables rather than maintaining competing definitions. Where prompt blocks repeat exact values so they can be used directly, treat those literals as dependent representations and keep them aligned with their named sources. Relationships should state what the link does — governed by, depends on, applies when, may adapt, or exception — rather than leaving the connection to inference.
+
+Distinguish fixed constraints from the creative variables a brief may supply. Keep portable instructions independent of model-specific syntax; label optional tool adaptations separately inside Generation instructions. Existing instructions can be relocated without changing their wording, but relocation does not approve unresolved uses or override newer guidance. Record conflicts, permissions, and draft evidence where they affect application.
+
+Reusable generation prompts belong here; brand guides link to the relevant treatments. Output assembly recipes remain with their output guides. Campaign prompts, experiments, generation logs, and project deliverables stay outside the source package. Only approved reusable learning and materials come back through review.
+
+This structure draws on [Sameness's image-consistency framework](https://www.sameness.io/ai-image-consistency), while retaining PBS's portable source files and separation between brand guidance, generation instructions, and project work.
 
 ### Well-known and built files
 
@@ -233,11 +273,9 @@ description:
 
 ## Prompts
 
-Draft in the brand voice:
+<!-- Link to the relevant completed treatment in dna/. Reusable prompt blocks live there. -->
 
-```text
-…
-```
+<!-- Link directly to each relevant completed dna/<treatment>.md file. The root README contains the full index. -->
 
 ````
 
@@ -280,6 +318,10 @@ Draft in the brand voice:
 | `audio.md`      | Optional: Sound identity · Sonic logo · Music · Usage · Accessibility · Examples · Prompts                                                                                                                                                 |
 
 Sections that set direction use **Fixed vs. Flexible** rule setting. Guardrails sections are Fixed rules with Don't examples.
+
+### Guidelines: `dna/<treatment>.md`
+
+Copy `dna/_treatment.md` for each defined treatment. The default sections are Purpose and scope · Precision · Semantic · Relationships · Generation instructions · Review criteria · References and open decisions. Keep all three layers explicit and mark missing knowledge without inventing it. See [DNA conventions](#dna--reusable-generation-instructions). The root `README.md` indexes completed treatments and their application limits; there is no `dna/README.md`.
 
 ### Guidelines: `design/<output>/DESIGN.md`
 

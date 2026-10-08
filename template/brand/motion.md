@@ -32,6 +32,6 @@ description:            # How the brand moves: principles, timing, usage, and ac
 
 ## Prompts
 
-```text
-…
-```
+<!-- Link to the relevant completed treatment in dna/. Reusable generation instructions and prompt blocks live there; this guide remains their governing source. -->
+
+<!-- Link directly to each relevant completed dna/<treatment>.md file. The root README contains the full index. -->

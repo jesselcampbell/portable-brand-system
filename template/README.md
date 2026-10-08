@@ -14,6 +14,7 @@ description:            # The front door to the brand system: what's in it, wher
 
 ```text
 brand/        Identity, voice, visual direction, motion, and optional audio guidance
+dna/          Reusable generation treatments with explicit dependencies and review criteria
 design/       One folder per output, with a DESIGN.md guide and reusable templates
 profiles/     Maintained facts about the organization, audiences, offerings, and people
 assets/       Approved fonts, logos, photography, art, icons, motion, and audio
@@ -25,7 +26,7 @@ assets/       Approved fonts, logos, photography, art, icons, motion, and audio
 
 ## Where to find things
 
-<!-- Wayfinding: a short "If you need to… → start with" table. Cover the common jobs (explain the brand, write anything, pick a color or logo, make an output, find audio guidance if used, check a claim, write a bio) and link straight to the file or section. Ten rows or fewer. -->
+<!-- Wayfinding: a short "If you need to… → start with" table. Cover the common jobs (explain the brand, write anything, pick a color or logo, make an output, find audio guidance if used, check a claim, write a bio) and link straight to the file or section. Keep this table concise; index all completed DNA treatments with their purposes and application limits, here or in a short Generation treatments section. -->
 
 | If you need to… | Start with |
 | --------------- | ---------- |
@@ -33,7 +34,7 @@ assets/       Approved fonts, logos, photography, art, icons, motion, and audio
 
 ## Using it with AI tools
 
-<!-- How to give a tool access (point it at the folder, or upload this README plus the task's files) and a pasteable instruction: read README first, load only what the task needs, treat brand/ and design/ as rules and profiles/ as maintained facts with source references, never invent, flag GAP and TODO instead of filling them. -->
+<!-- How to give a tool access (point it at the folder, or upload this README plus the task's files) and a pasteable instruction: read README first, load only what the task needs, treat brand/ as governing guidance, dna/ as generation instructions linked to that guidance, design/ as output guidance, and profiles/ as maintained facts with source references, never invent, flag GAP and TODO instead of filling them. -->
 
 ```text
 …
