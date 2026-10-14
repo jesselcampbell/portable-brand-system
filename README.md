@@ -1,12 +1,12 @@
 # Portable Brand System
 
-An open standard for delivering and maintaining brands as portable files. A shared foundation for people and AI to grow and manage brands, preserving identity while expanding expression.
+An open standard for delivering and maintaining brands. A shared foundation for people and AI to grow and manage brands in a way that preserves identity and expands expression.
 
 ## Why
 
-People get to know a company through what it says and does. As a company grows, more people have a hand in that work. Teams change, tools multiply, and the thinking behind the brand gets scattered. With AI, more people make websites, presentations, and campaigns, but they aren't always working from the same understanding. Drift happens.
+People get to know a company through what it says and does. As a company grows, more people have a hand in that work. Teams change, tools multiply, and the thinking behind the brand gets scattered. With AI, more people and systems are making websites, presentations, and campaigns, but they aren't always working from the same understanding. Drift happens.
 
-A Portable Brand System is the common starting point. It puts the brand's thinking, assets, and reusable patterns into the hands of the people and tools doing the work, so every deck, page, and post benefits from the work that came before it.
+A *Portable Brand System* is the common starting point. It puts the brand's thinking, assets, reusable patterns, and generative DNA into the hands of the people and technology doing the work, so every deck, page, and post benefits from the work that came before it.
 
 It makes doing the right thing the easy thing.
 
@@ -29,13 +29,13 @@ The package holds approved, reusable brand knowledge and materials that remain u
 
 The standard defines how that information is organized, what it means, and how the parts relate. It needs clear documentation, useful examples, and a small set of dependable conventions. As we build it, we need to be precise about what's required and what's optional. Add complexity only when it solves a demonstrated problem shared across implementations. Adoption should be easy, and a simple brand should remain simple.
 
-**The package is the source context for generated outputs.** There is deliberately no root `BRAND.md` or `DESIGN.md`. A platform can assemble those files for a particular tool or task, alongside `llms.txt`, `tokens.json`, or other formats. The source retains the detail, rationale, and relationships needed to produce a good version of each. The guides inside `design/` remain part of that source: they explain how the brand applies across outputs and within each medium.
+**The package is the source context for generated outputs.** There is deliberately no root `BRAND.md`, `brand.json`, `llms.txt`, `DESIGN.md`, `tokens.json` or other standard. A Portable Brand System is meant to be the raw source for creating those artifacts. A third party platform can assemble those files for a particular tool or task. The source retains the detail, rationale, and relationships needed to produce a good version of each. The guides inside `design/` remain part of that source: they explain how the brand applies across outputs and within each medium.
 
-**Platforms make the standard useful in different ways.** They can conduct research, manage editing and approvals, distribute updates, connect tools, generate assets, check outputs, and propose improvements from finished work. This is where opinionated workflows, interfaces, automation, and services belong. Different platforms should be free to serve different needs using the same underlying standard.
+**Platforms make the standard useful in different ways.** This structure is intentionally as flat as it can be, so that other technologies can pick it up and conduct brand activities: research, governance, distribution, growth, asset generation, or propose improvements from finished work. This is where opinionated workflows, interfaces, automation, and services belong. Different platforms should be free to serve different needs using the same underlying standard.
 
 People should be able to build their own platforms, integrate the files into existing tools, or use them directly with an AI system. None of those paths should depend on a particular provider’s permission or infrastructure. Platform features must not become hidden requirements for understanding or maintaining the brand. Approved changes to the shared brand belong in the portable files so they can travel with it.
 
-**The standard succeeds when others can adopt it easily. Platforms succeed by making it more useful.**
+The standard succeeds when others can adopt it easily. Platforms succeed by making it more useful.
 
 ## The brand grows through use
 
@@ -159,8 +159,8 @@ This structure draws on [Sameness's image-consistency framework](https://www.sam
 
 ## What stays outside
 
-Research archives, interviews, audits, experiments, working files, and project deliverables stay in a platform or other external workspace. Essential rationale, source references, and approved decisions travel with the brand.
+Impermanent artifacts, such as research, interviews, audits, experiments, working files, and project deliverables. These might stay on the platform they were created on, or some other external workspace. Essential rationale, source references, and approved decisions travel with the brand.
 
-Platforms assemble output kits and compiled formats such as `BRAND.md`, `brand.json`, `DESIGN.md`, `llms.txt`, JSON-LD, and `tokens.json`. The package has no root `BRAND.md` or `DESIGN.md`, and no `resources/`, `outputs/`, or `dist/` folder. The `DESIGN.md` inside each output folder is maintained source guidance.
+Platforms assemble output kits and compiled formats such as `BRAND.md`, `brand.json`, `DESIGN.md`, `llms.txt`, JSON-LD, and `tokens.json`. The package does not contain these files, and has no `resources/`, `outputs/`, or `dist/` folder.
 
-Approved reusable assets, patterns, and templates can become part of the package through review, whether created by a person or generated by a tool. What matters is their role as maintained brand materials.
+Approved reusable assets, patterns, and templates can become part of the package in the `design/` directory through review, whether created by a person or generated by a tool. What matters is their role as maintained brand materials.
